@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+	<bean id = "b1" class = "com.demo.springdemo.Bike"></bean>
+	<bean id = "c1" class = "com.demo.springdemo.Car"></bean>
+	
+	<bean id = "emp" class = "com.demo.springdemo.Employee">
+		<property name="name" value = "Susmitha Sanikommu"></property>
+		<property name="age" value = "21"></property>
+		<property name="salary" value = "10000.00f"></property>
+		<property name="address" ref = "addr"></property>
+	</bean>
+	
+	<bean id = "sdt" class = "com.demo.springdemo.Student">
+		<constructor-arg name = "rollNo" value="101"></constructor-arg>
+		<constructor-arg name = "name" value="Susmitha"></constructor-arg>
+		<constructor-arg name = "school" value="Central School"></constructor-arg>
+		<constructor-arg name = "address" ref = "addr"></constructor-arg>
+	</bean>
+	
+	<bean name = "addr" class = "com.demo.springdemo.Address">
+		<property name="state" value="Telangana"></property>
+		<property name="city" value = "Hyderabad"></property>
+		<property name="pin" value="123456"></property>
+	</bean>
+	
+	<bean name = "d1,d2" class = "com.demo.springdemo.Demo" scope = "prototype" init-method="abc" destroy-method="xyz" factory-method="another">
+	
+	</bean>
+	
+	
+</beans>
