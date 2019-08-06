@@ -9,7 +9,7 @@ import java.util.List;
 
 public class MovieClient {
     private static MovieController movieController;
-    public static void main(){
+    public static void main(String[] args){
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("application-context.xml");
         movieController = applicationContext.getBean(MovieController.class);
 
@@ -24,20 +24,20 @@ public class MovieClient {
 
         List<Movies> movies = movieController.findAll();
         System.out.println(movies);
-        System.out.println("-----------------------------------------");
+        
 
         movieController.deleteMovie(3);
         movies = movieController.findAll();
         System.out.println(movies);
-        System.out.println("-----------------------------------------");
+        
 
         movieController.editMovie(new Movies(3,"Dilwale Dulhaniya Ley Jayenge",3.1,8),3);
         movies = movieController.findAll();
         System.out.println(movies);
-        System.out.println("-----------------------------------------");
+        
 
         Movies movie = movieController.find(4);
         System.out.println(movie);
-        System.out.println("-----------------------------------------");
+        
     }
 }

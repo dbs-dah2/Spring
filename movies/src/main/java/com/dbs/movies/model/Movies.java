@@ -10,6 +10,8 @@ public class Movies implements Serializable, Comparable<Movies> {
     private double duration;
     private int rating;
 
+    private Movies() {}
+    
     public Movies(long id, String name, double duration, int rating) {
         this.id = id;
         this.name = name;
