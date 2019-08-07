@@ -16,7 +16,7 @@ public class Dependent {
 	
 	
 	@ManyToOne
-    @JoinColumn(name = "emp_id", nullable = false)
+    @JoinColumn(name = "emp_id", nullable = true)
 	private Employee employee;
 
 	public long getId() {
