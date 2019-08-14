@@ -1,0 +1,1 @@
+insert into STUDENT values(123,21,'Sush');
